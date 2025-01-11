@@ -7,14 +7,14 @@ function adicionar() {
         return;
     }
 
-    if (amigos.includes(nomeAmigo.value)) {
+    if (amigos.includes(nomeAmigo.value.toUpperCase())) {
         alert('Nome já adicionado!');
         nomeAmigo.value = '';
         return;
-    }
+    }    
 
     let lista = document.getElementById('lista-amigos');
-    amigos.push(nomeAmigo.value);
+    amigos.push(nomeAmigo.value.toUpperCase());
     
     if (lista.textContent == '') {
         lista.textContent = nomeAmigo.value;
